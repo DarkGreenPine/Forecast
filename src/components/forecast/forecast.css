@@ -1,0 +1,13 @@
+.hourly-forecast {
+    display: flex;
+    justify-content: center;
+}
+
+.hourly-item {
+    padding-left: 3%;
+}
+
+hr {
+    color: white;
+    width: 50%;
+}

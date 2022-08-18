@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "./search.css";
+import ForeCast from "../forecast/forecast";
 
 const Search = () => {
     const [data, setData] = useState({});
@@ -34,7 +36,7 @@ const Search = () => {
 
 
     return (
-        <div className="weather">
+        <div className="weather" style={{height:"100vh"}}>
             <div className="search">
                 <input
                     value={location}
@@ -53,6 +55,9 @@ const Search = () => {
                 <div className="weather-description">
                     {data.main ? <p>{data.weather[0].main}</p> : null}
                 </div>
+            </div>
+            <div>
+                {forecastData.list ? <ForeCast forecastData={forecastData}/> : null}
             </div>
         </div>
     )
